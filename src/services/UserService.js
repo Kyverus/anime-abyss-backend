@@ -12,7 +12,7 @@ export default class UserService {
       const createdUser = await User.create(newUser);
       return createdUser;
     } catch (error) {
-      throw new Error(error);
+      throw err;
     }
   }
 
@@ -21,7 +21,7 @@ export default class UserService {
       const users = await User.find({});
       return users;
     } catch (error) {
-      throw new Error(error);
+      throw err;
     }
   }
 
@@ -30,7 +30,7 @@ export default class UserService {
       const user = await User.findById(userId);
       return user;
     } catch (error) {
-      throw new Error(error);
+      throw err;
     }
   }
 
@@ -39,7 +39,7 @@ export default class UserService {
       const user = await User.findOne(schema).exec();
       return user;
     } catch (error) {
-      throw new Error(error);
+      throw err;
     }
   }
 
@@ -49,7 +49,7 @@ export default class UserService {
       const updatedUser = await User.findById(userId);
       return updatedUser;
     } catch (error) {
-      throw new Error(error);
+      throw err;
     }
   }
 
@@ -58,7 +58,7 @@ export default class UserService {
       const user = await User.findByIdAndDelete(userId);
       return user;
     } catch (error) {
-      throw new Error(error);
+      throw err;
     }
   }
 }
