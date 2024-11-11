@@ -1,4 +1,5 @@
 export const allowedOrigins = [
   "http://localhost:5173",
-  "https://anime-abyss.vercel.app",
+  "https://animeabyss.vercel.app",
+  "https://anime-abyss-list.vercel.app",
 ];
