@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ListEntrySchema = mongoose.Schema({
+const AnimeEntrySchema = mongoose.Schema({
   userId: {
     type: String,
     required: [true, "User invalid"],
@@ -8,6 +8,18 @@ const ListEntrySchema = mongoose.Schema({
   animeId: {
     type: String,
     required: [true, "Anime invalid"],
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  imageURL: {
+    type: String,
+    required: true,
+  },
+  genres: {
+    type: String,
+    required: true,
   },
   rating: {
     type: Number,
@@ -20,6 +32,10 @@ const ListEntrySchema = mongoose.Schema({
   },
 });
 
-const ListEntry = mongoose.model("ListEntry", ListEntrySchema, "list-entries");
+const AnimeEntry = mongoose.model(
+  "AnimeEntry",
+  AnimeEntrySchema,
+  "anime-entries"
+);
 
-export default ListEntry;
+export default AnimeEntry;

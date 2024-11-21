@@ -6,7 +6,7 @@ import "dotenv/config";
 import { corsOptions } from "../src/config/corsOptions.js";
 import { credentials } from "../src/middleware/credentials.js";
 
-import ListEntryRouter from "../src/routes/listentry.js";
+import AnimeEntryRouter from "../src/routes/animeentry.js";
 import UserRouter from "../src/routes/users.js";
 
 const app = express();
@@ -24,7 +24,7 @@ app.use(credentials); //use in deployment to block any sites other than allowed 
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use("/api/users", UserRouter);
-app.use("/api/listentries", ListEntryRouter);
+app.use("/api/animeentries", AnimeEntryRouter);
 
 mongoose.set("strictQuery", false);
 mongoose
