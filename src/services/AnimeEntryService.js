@@ -8,7 +8,7 @@ export default class ListEntryService {
         animeId: data.animeId,
         title: data.title,
         imageURL: data.imageURL,
-        genre: data.genre,
+        genres: data.genres,
         rating: data.rating,
         category: data.category,
       };

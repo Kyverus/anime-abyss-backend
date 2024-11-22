@@ -5,6 +5,7 @@ export default class AnimeEntryController {
     const data = {
       userId: req.user.id,
       animeId: req.body.animeId,
+      title: req.body.title,
       imageURL: req.body.imageURL,
       genres: req.body.genres,
       rating: req.body.rating,
