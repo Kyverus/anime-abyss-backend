@@ -9,7 +9,7 @@ export default class AnimeEntryController {
       });
 
       if (validateDuplication) {
-        res.status(400).json({ message: "Anime is already listed" });
+        return res.status(400).json({ message: "Anime is already listed" });
       }
 
       const data = {
