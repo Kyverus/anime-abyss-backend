@@ -37,6 +37,15 @@ export default class ListEntryService {
     }
   }
 
+  static async getByKeyAndValue(schema) {
+    try {
+      const user = await User.findOne(schema).exec();
+      return user;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   static async update(entryId, data) {
     try {
       const animeEntry = await AnimeEntry.findByIdAndUpdate(entryId, data);

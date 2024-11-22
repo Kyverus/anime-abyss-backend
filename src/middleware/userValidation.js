@@ -21,7 +21,7 @@ export async function validateUniqueUser(req, res, next) {
     }
 
     if (errors.length > 0) {
-      return res.status(404).json({ errors: errors });
+      return res.status(400).json({ errors: errors });
     }
 
     next();
