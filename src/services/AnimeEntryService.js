@@ -1,6 +1,6 @@
 import AnimeEntry from "../models/AnimeEntryModel.js";
 
-export default class ListEntryService {
+export default class AnimeEntryService {
   static async create(data) {
     try {
       const newAnimeEntry = {
@@ -39,8 +39,8 @@ export default class ListEntryService {
 
   static async getByKeyAndValue(schema) {
     try {
-      const user = await User.findOne(schema).exec();
-      return user;
+      const animeEntry = await AnimeEntry.findOne(schema).exec();
+      return animeEntry;
     } catch (error) {
       throw error;
     }
