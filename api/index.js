@@ -6,7 +6,7 @@ import "dotenv/config";
 import { corsOptions } from "../src/config/corsOptions.js";
 import { credentials } from "../src/middleware/credentials.js";
 
-import AnimeEntryRouter from "../src/routes/animeentry.js";
+import AnimeEntryRouter from "../src/routes/animeentries.js";
 import UserRouter from "../src/routes/users.js";
 
 const app = express();
