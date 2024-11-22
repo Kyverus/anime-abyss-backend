@@ -6,8 +6,7 @@ export default class AnimeEntryController {
       userId: req.user.id,
       animeId: req.body.animeId,
       imageURL: req.body.imageURL,
-      genre: req.body.genre,
-      rating: req.body.rating,
+      genres: req.body.genre,
       rating: req.body.rating,
       category: req.body.category,
     };
