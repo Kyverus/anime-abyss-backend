@@ -1,4 +1,3 @@
-import AnimeEntry from "../models/AnimeEntryModel.js";
 import AnimeEntryService from "../services/AnimeEntryService.js";
 
 export default class AnimeEntryController {
