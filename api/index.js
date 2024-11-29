@@ -6,8 +6,9 @@ import "dotenv/config";
 import { corsOptions } from "../src/config/corsOptions.js";
 import { credentials } from "../src/middleware/credentials.js";
 
-import AnimeEntryRouter from "../src/routes/animeentries.js";
 import UserRouter from "../src/routes/users.js";
+import AnimeEntryRouter from "../src/routes/animeentries.js";
+import MangaEntryRouter from "../src/routes/mangaentries.js";
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use("/api/users", UserRouter);
 app.use("/api/animeentries", AnimeEntryRouter);
+app.use("/api/mangaentries", MangaEntryRouter);
 
 mongoose.set("strictQuery", false);
 mongoose
