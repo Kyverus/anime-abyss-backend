@@ -42,7 +42,7 @@ export default class AnimeEntryService {
       const animeEntry = await AnimeEntry.findOne(schema).exec();
       return animeEntry;
     } catch (error) {
-      throw error;
+      throw new Error(error);
     }
   }
 

@@ -21,8 +21,8 @@ export default class AnimeEntryController {
         rating: req.body.rating,
         category: req.body.category,
       };
-      const listEntry = await AnimeEntryService.create(data);
-      res.json(listEntry);
+      const animeEntry = await AnimeEntryService.create(data);
+      res.json(animeEntry);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }

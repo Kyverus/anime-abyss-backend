@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const AnimeEntrySchema = mongoose.Schema({
+const MangaEntrySchema = mongoose.Schema({
   userId: {
     type: String,
     required: [true, "User invalid"],
   },
-  animeId: {
+  mangaId: {
     type: String,
-    required: [true, "Anime invalid"],
+    required: [true, "Manga invalid"],
   },
   title: {
     type: String,
@@ -27,15 +27,15 @@ const AnimeEntrySchema = mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ["Plan To Watch", "Watching", "Completed", "On Hold", "Dropped"],
+    enum: ["Plan To Read", "Reading", "Completed", "On Hold", "Dropped"],
     required: [true, "Please provide a category"],
   },
 });
 
-const AnimeEntry = mongoose.model(
-  "AnimeEntry",
-  AnimeEntrySchema,
-  "anime-entries"
+const MangaEntry = mongoose.model(
+  "MangaEntry",
+  MangaEntrySchema,
+  "manga-entries"
 );
 
-export default AnimeEntry;
+export default MangaEntry;
