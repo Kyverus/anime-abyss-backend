@@ -5,7 +5,7 @@ export default class MangaEntryService {
     try {
       const newMangaEntry = {
         userId: data.userId,
-        animeId: data.mangaId,
+        mangaId: data.mangaId,
         title: data.title,
         imageURL: data.imageURL,
         genres: data.genres,
