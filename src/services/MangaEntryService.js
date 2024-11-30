@@ -1,7 +1,7 @@
 import MangaEntry from "../models/MangaEntryModel.js";
 
 export default class MangaEntryService {
-  static async create() {
+  static async create(data) {
     try {
       const newMangaEntry = {
         userId: data.userId,
