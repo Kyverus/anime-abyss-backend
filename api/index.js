@@ -23,7 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(credentials); //use in deployment to block any sites other than allowed origins
 app.use(cors(corsOptions));
-app.options('*',cors(corsOptions));
 app.use(cookieParser());
 app.use("/api/users", UserRouter);
 app.use("/api/animeentries", AnimeEntryRouter);
