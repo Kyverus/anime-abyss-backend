@@ -6,13 +6,13 @@
   }],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/api/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     },
     {
-      "source": "/anime-abyss-backend.vercel.app/(.*)",
+      "source": "/anime-abyss-backend.vercel.app/api/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
