@@ -4,18 +4,15 @@
     "source": "/(.*)", 
     "destination": "/api", 
   }],
-  "headers": [
-        {
-          "source": "/(.*)",
-          "headers": [
-            { "key": "Access-Control-Allow-Origin", "value": "*" }
-          ]
-        },
-        {
-          "source": "/anime-abyss-backend.vercel.app/(.*)",
-          "headers": [
-            { "key": "Access-Control-Allow-Origin", "value": "*" }
-          ]
-        }  
+  "headers": [{
+    "source": "/(.*)",
+    "headers": [
+      { "key": "Access-Control-Allow-Origin", "value": "*" }
+    ]},
+    {
+    "source": "/anime-abyss-backend.vercel.app/(.*)",
+    "headers": [
+      { "key": "Access-Control-Allow-Origin", "value": "*" }
     ]
+  }]
 }
