@@ -2,6 +2,20 @@
   "version": 2, 
   "rewrites": [{ 
     "source": "/(.*)", 
-    "destination": "/api", 
-  }]
+    "destination": "/api" 
+  }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/anime-abyss-backend.vercel.app/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }  
+]
 }
