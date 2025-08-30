@@ -28,6 +28,17 @@ app.use("/api/users", UserRouter);
 app.use("/api/animeentries", AnimeEntryRouter);
 app.use("/api/mangaentries", MangaEntryRouter);
 
+app.get("/api/health", (req, res) => {
+  const state = mongoose.connection.readyState;
+
+  if (state === 1) {
+    // 1 = connected
+    res.sendStatus(200);
+  } else {
+    res.status(503).json({ error: "MongoDB unavailable", state });
+  }
+});
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(
