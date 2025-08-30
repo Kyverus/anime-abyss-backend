@@ -4,7 +4,7 @@ export function credentials(req, res, next) {
   const origin = req.headers.origin;
 
   if (!allowedOrigins.includes(origin)) {
-    return res.status(500).json({ message: "Not allowed by CORS" });
+    return res.status(403).json({ message: "Not allowed by CORS" });
   }
 
   next();
