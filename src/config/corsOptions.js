@@ -8,14 +8,5 @@ export const corsOptions = {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true,              
-  optionsSuccessStatus: 200,      
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS", 
-  allowedHeaders: [              
-    "Content-Type",
-    "Authorization",
-    "Origin",
-    "Accept",
-    "X-Requested-With",
-  ],
+  optionsSuccessStatus: 200,
 };

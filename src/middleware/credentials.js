@@ -3,13 +3,15 @@ import { allowedOrigins } from "../config/allowedOrigins.js";
 export function credentials(req, res, next) {
   const origin = req.headers.origin;
 
-  if (origin && !allowedOrigins.includes(origin)) {
+  if (!allowedOrigins.includes(origin)) {
     return res.status(403).json({ message: "Not allowed by CORS" });
   }
 
-  if (origin) {
-    res.header("Access-Control-Allow-Credentials", "true");
-  }
-
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Origin, Authorization, Accept"
+  );
   next();
 }
