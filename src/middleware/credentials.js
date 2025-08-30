@@ -7,11 +7,5 @@ export function credentials(req, res, next) {
     return res.status(500).json({ message: "Not allowed by CORS" });
   }
 
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Origin, Authorization, Accept"
-  );
   next();
 }
