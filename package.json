@@ -21,7 +21,4 @@
   "license": "ISC",
   "description": "",
   "type": "module",
-  "engines": {
-    "node": "24.x"
-  }
 }
